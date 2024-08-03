@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to external CSS file for custom styles -->
     <link rel="stylesheet" href="./output.css" />
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to Tailwind CSS for utility-first styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <title>Student Registration Form</title>
-    
   </head>
-  <body
-    class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 m-0 p-0"
-  >
+  <body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 m-0 p-0">
+    <!-- Header section with title and description -->
     <header class="text-white">
       <h1 class="text-4xl font-extrabold text-center mt-12">
         Student Registration System
@@ -27,74 +28,50 @@
         </p>
       </div>
     </header>
-    <main class="flex justify-evenly">
-      <section
-        class="bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 w-1/4 p-6 rounded-lg"
-      >
+
+    <!-- Main content section with form and table -->
+    <main class="flex flex-col md:flex-row justify-evenly">
+      <!-- Form section for student registration -->
+      <section class="bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 w-full md:w-1/4 p-6 rounded-lg hover:scale-110 ease-in duration-200 mb-6 md:mb-0">
         <form action="" class="flex flex-col justify-evenly">
+          <!-- Input fields for student details -->
           <label for="name" class="text-white font-bold">Student Name: </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Enter Your Name"
-            required
-            class="mb-3 w-full rounded-md p-1"
-          />
-          <label for="studentid" class="text-white font-bold"
-            >Student Id:</label
-          >
-          <input
-            type="number"
-            id="studentid"
-            placeholder="Enter Your Id"
-            required
-            class="mb-3 w-full rounded-md p-1"
-          />
+          <input type="text" id="name" placeholder="Enter Your Name" required class="mb-3 w-full rounded-md p-1 focus:outline-none focus:ring-2 ring-pink-500 ring-inset" />
+          
+          <label for="studentid" class="text-white font-bold">Student Id:</label>
+          <input type="number" id="studentid" placeholder="Enter Your Id" required class="mb-3 w-full rounded-md p-1 focus:outline-none focus:ring-2 ring-pink-500 ring-inset" />
+          
           <label for="emailid" class="text-white font-bold">Email Id:</label>
-          <input
-            type="email"
-            id="emailid"
-            placeholder="Enter Your Email_id"
-            required
-            class="mb-3 w-full rounded-md p-1"
-          />
+          <input type="email" id="emailid" placeholder="Enter Your Email_id" required class="mb-3 w-full rounded-md p-1 focus:outline-none focus:ring-2 ring-pink-500 ring-inset" />
+          
           <label for="contact" class="text-white font-bold">Contact No.:</label>
-          <input
-            type="tel"
-            id="contact"
-            placeholder="Enter Your Phone_no."
-            required
-            class="mb-3 w-full rounded-md p-1"
-          />
-          <button
-            
-            id="add"
-            class="w-20 h-8 rounded-lg text-white font-bold bg-gradient-to-r from-teal-500 to-blue-500 hover:from-pink-500 hover:to-orange-500"
-          >
+          <input type="tel" id="contact" placeholder="Enter Your Phone_no." required class="mb-3 w-full rounded-md p-1 focus:outline-none focus:ring-2 ring-pink-500 ring-inset" />
+          
+          <!-- Submit button to add student details -->
+          <button id="add" class="w-20 h-8 rounded-lg text-white font-bold bg-gradient-to-r from-teal-500 to-blue-500 hover:from-pink-500 hover:to-orange-500 hover:scale-110 ease-in duration-0">
             Add
           </button>
         </form>
       </section>
-      <section
-        class="bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 mx-24 w-auto p-6 rounded-lg max-h-96 overflow-y-auto "
-      >
-        
-          <table class="w-full">
-            <thead>
-                <tr class="p-2 text-white font-bold border-2 border-white">
-                    <th class="p-2">Name</th>
-                    <th class="p-2">StudentId</th>
-                    <th class="p-2">EmailId</th>
-                    <th class="p-2">Contact No.</th>
-                </tr>
-            </thead>
-            <tbody id="list">
-
-            </tbody>
-          </table>
-       
+      
+      <!-- Table section to display the list of registered students -->
+      <section class="bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 w-full md:mx-12 md:w-auto p-6 rounded-lg max-h-96 overflow-y-auto hover:scale-110 ease-in duration-200">
+        <table class="w-full">
+          <thead>
+            <tr class="p-2 text-white font-bold border-2 border-white">
+              <th class="p-2">Name</th>
+              <th class="p-2">StudentId</th>
+              <th class="p-2">EmailId</th>
+              <th class="p-2">Contact No.</th>
+            </tr>
+          </thead>
+          <tbody id="list">
+            <!-- Table rows will be dynamically added here -->
+          </tbody>
+        </table>
       </section>
     </main>
+    <!-- Link to JavaScript file for form functionality -->
     <script src="index.js"></script>
   </body>
 </html>
